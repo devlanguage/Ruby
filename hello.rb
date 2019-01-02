@@ -5,6 +5,13 @@ require "rbconfig"
 require 'trig.rb'
 require 'moral'
  
+module Persons
+  class PersonManager
+    def getPerson
+      return "test1";
+    end
+  end
+end
 y = Trig.sin(Trig::PI/4)
 wrongdoing = Moral.sin(Moral::VERY_BAD)
 
