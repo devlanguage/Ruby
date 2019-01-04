@@ -1,0 +1,14 @@
+apiVersion: "cdf.microfocus.com/v1"
+kind: SuiteInstaller
+metadata:
+  name: demo-suite-installer
+  namespace: core
+spec:
+  image: suiteinstaller:1.1.1
+  init-secret:
+    user: admin
+    password: adminpassword
+  init-pv:
+    nfs:
+      server: 192.168.0.1
+      path: /var/vols/itom/core
